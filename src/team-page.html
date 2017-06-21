@@ -1,0 +1,37 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="team-page">
+  <template>
+    <style include="app-grid-style">
+    :host {
+      display: block;
+      background-color: red;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      @apply(--layout-horizontal);
+      @apply(--layout-center-justified);
+      min-height: 100vh;
+    }
+    </style>
+    <div>team</div>
+  </template>
+  <script>
+  Polymer({
+    is: 'team-page',
+    properties: {
+      // item: {
+      //   type: Object,
+      //   observer: '_itemChanged'
+      // },
+      // section: {
+      //   type: String
+      // },
+      // relatedItems: {
+      //   type: Array
+      // }
+    }
+    // _itemChanged: function(item) {
+    //   this.$.img.src = '';
+    //   this.$.img.src = item.imageUrl;
+    // }
+  });
+  </script>
+</dom-module>

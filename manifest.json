@@ -1,0 +1,7 @@
+{
+  "name": "mttp",
+  "short_name": "mttp",
+  "description": "Mttp Homepage",
+  "start_url": "/",
+  "display": "standalone"
+}
