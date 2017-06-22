@@ -1,53 +1,56 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/app-layout/app-grid/app-grid-style.html">
+<link rel="import" href="../bower_components/app-localize-behavior/app-localize-behavior.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="section-splash.html">
+<link rel="import" href="common-footer.html">
 <dom-module id="default-page">
   <template>
-    <style include="app-grid-style">
+    <style include="iron-flex iron-flex-alignment">
     :host {
       display: block;
-      background-color: white;
+      background-color: red;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       @apply(--layout-vertical);
-      @apply(--layout-center-center);
       min-height: 100vh;
     }
-    
-    @media (max-width: 640px) {
-      :host {
-        --app-grid-columns: 1;
-      }
+     
+    .introduction {
+      min-height: 260px;
+      background: lightgreen;
+      color: white;
     }
     
-    .container {
-      @apply(--layout-vertical);
-    }
-    
-    .flexchild {
-      @apply(--layout-flex);
-      /*--app-grid-columns: 3;*/
-      /*--app-grid-item-height: 100px;*/
-      /*--app-grid-gutter:10px;*/
-      /*--app-grid-item-height: 50%;*/
-      /*--app-grid-expandible-item-columns: 3;*/
+    .feature {
+      padding: 80px;
     }
 
-    .section {
-      padding:; 0 80px 0 80px;
-      border-bottom:solid 1px red;
-    }
-    
-    .item:first-child {
-      @apply --app-grid-expandible-item;
+    .one {
+      background: lightyellow;
     }
     </style>
-    <div class="container">
-      <div class="section">
-        One
+    <div class="container vertical layout">
+      <section-splash></section-splash>
+      <div class="introduction">
+        <div>Introduction</div>
       </div>
-      <div class="flexchild"></div>
-      <div>Three</div>
+      <div class="feature one">
+        <div>Feature1</div>
+      </div>
+      <div class="feature two">
+        <div>Feature2</div>
+      </div>
+      <div class="feature1 throw">
+        <div>Feature3</div>
+      </div>
+      <div class="feature four">
+        <div>Feature4</div>
+      </div>
     </div>
+    <common-footer></common-footer>
   </template>
   <script>
   Polymer({
@@ -57,7 +60,7 @@
       //   type: Object,
       //   observer: '_itemChanged'
       // },
-      // section: {
+      // div: {
       //   type: String
       // },
       // relatedItems: {
